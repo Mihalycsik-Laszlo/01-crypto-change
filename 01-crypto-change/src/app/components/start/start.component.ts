@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start',
@@ -12,5 +13,9 @@ export class StartComponent {
     password: new FormControl('', Validators.required),
   });
 
-  login() {}
+  constructor(private router: Router) {}
+
+  login() {
+    this.router.navigate(['home']);
+  }
 }
