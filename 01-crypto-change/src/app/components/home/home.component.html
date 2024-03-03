@@ -1,1 +1,12 @@
-<p>home works!</p>
+<ul class="nav nav-tabs">
+  <li *ngFor="let crypto of activeCryptos">{{ crypto.name }}</li>
+  <li class="nav-item">
+    <a class="nav-link active bg-warning" aria-current="page">BTC</a>
+  </li>
+  <li class="nav-item bg-warning">
+    <a class="nav-link" aria-current="page">ETH</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bg-danger" aria-current="page" href="">+</a>
+  </li>
+</ul>
