@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { StartComponent } from './components/start/start.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { PlusComponent } from './components/tabs/plus/plus.component';
 
 @NgModule({
-  declarations: [AppComponent, StartComponent, HomeComponent],
+  declarations: [AppComponent, StartComponent, HomeComponent, PlusComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

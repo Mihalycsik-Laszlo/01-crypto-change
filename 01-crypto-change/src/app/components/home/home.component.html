@@ -1,12 +1,58 @@
 <ul class="nav nav-tabs">
   <li *ngFor="let crypto of activeCryptos">{{ crypto.name }}</li>
   <li class="nav-item">
-    <a class="nav-link active bg-warning" aria-current="page">BTC</a>
-  </li>
-  <li class="nav-item bg-warning">
-    <a class="nav-link" aria-current="page">ETH</a>
+    <a class="nav-link bg-warning" aria-current="page">BTC</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link bg-danger" aria-current="page" href="">+</a>
+    <a class="nav-link bg-warning" aria-current="page">ETH</a>
+  </li>
+  <li class="nav-item">
+    <button
+      class="nav-link bg-danger"
+      type="button"
+      aria-current="page"
+      data-bs-toggle="modal"
+      data-bs-target="#selectCrypto"
+    >
+      +
+    </button>
   </li>
 </ul>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="selectCrypto"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Add a crypto here:
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <label for="cryptoSelect">Choose a crypto:</label>
+        <select name="cryptoSelect" id="cryptoSelect">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Add crypto</button>
+      </div>
+    </div>
+  </div>
+</div>
